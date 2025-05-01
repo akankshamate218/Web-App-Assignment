@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise &amp; Sunset Dashboard</title>
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-VuS2W8REH2eEGGIK9r+8IGDVE7DAzIi3TkEwBp1nXKTNlQqFygO5ZC1nuA8kQPSd/GCtiUi8K16TBX+XhPTJog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1> Sunrise &amp; Sunset</h1>
+        <p class="subtitle">
+            Accurate times from <a href="https://sunrisesunset.io" target="_blank" rel="noopener">sunrisesunset.io</a>
+        </p>
+    </header>
+
+    <main>
+        <!-- Location controls -->
+        <form id="locationForm" class="controls" autocomplete="off">
+            <label for="preset" class="visually-hidden">Choose a location</label>
+            <select id="preset" name="preset" aria-label="Preset locations">
+                <option value="">— select a city —</option>
+            </select>
+
+            <button type="button" id="geoBtn" class="secondary">
+                <i class="fa-solid fa-location-crosshairs icon" aria-hidden="true"></i>
+                Use&nbsp;my&nbsp;location
+            </button>
+        </form>
+
+        <!-- Data cards -->
+        <section id="cards" class="grid" aria-live="polite"></section>
+
+        <p id="errorMsg" class="error" hidden></p>
+    </main>
+
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>
